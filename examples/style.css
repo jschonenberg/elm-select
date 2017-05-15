@@ -1,0 +1,74 @@
+body {
+    margin: 4rem;
+    font-family: BlinkMacSystemFont;
+    line-height: 1.6em;
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 0px 1px #1457C1;
+}
+
+.elm-select--toggle {
+    min-width: 12rem;
+    padding: .5em .8em .6em;
+
+    color: #222;
+    font-size: inherit;
+    font-family: inherit;
+    text-align: left;
+
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+
+    background-image: url('https://icon.now.sh/unfold_more');
+    background-position: center right 0.25rem;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+.elm-select--drawer-wrapper {
+    width: 100%;
+    margin-top: 0.25rem;
+
+    opacity: 0;
+    transform: translateY(-0.5rem);
+    transition: visibility 0s linear 50ms,
+                transform 50ms ease-in-out,
+                opacity 50ms ease-in-out;
+}
+.elm-select--drawer-wrapper.visible {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: visibility 0s linear,
+                transform 50ms ease-in-out,
+                opacity 50ms ease-in-out;
+}
+
+.elm-select--drawer-body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0;
+
+    border: 1px solid #DDD;
+    border-radius: 0.25rem;
+}
+
+.elm-select--drawer-body button {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 2rem 0.6rem .8rem;
+
+    font-size: inherit;
+    text-align: left;
+
+    border-width: 0px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.elm-select--drawer-body button:hover,
+.elm-select--drawer-body button:focus {
+    background-color: #F4F4F4;
+}
